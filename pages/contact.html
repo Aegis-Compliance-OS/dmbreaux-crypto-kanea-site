@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact KANEA Technology Systems — briefing requests, partnership inquiries, and pilot program interest.">
+  <title>Contact — KANEA Technology Systems</title>
+  <link rel="stylesheet" href="../css/kanea.css">
+  <link rel="icon" type="image/svg+xml" href="../images/KANEA_logo_emerald.svg">
+  <style>
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      background: rgba(40,65,57,0.15);
+      border: 1px solid rgba(128,144,120,0.25);
+      color: var(--warm-white);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      padding: 14px 18px;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: var(--wasabi);
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(250,250,247,0.3);
+    }
+
+    .contact-form select option {
+      background: var(--noir);
+      color: var(--warm-white);
+    }
+
+    .contact-form label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--wasabi);
+      margin-bottom: 8px;
+    }
+
+    .form-group { margin-bottom: 24px; }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 640px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-nav" class="site-nav"></header>
+
+  <main class="main-content">
+
+    <!-- ── PAGE HEADER ──────────────────────────────────── -->
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow" style="margin-bottom:20px;">Contact</p>
+        <h1 class="display" style="max-width:680px;">Let's discuss your requirements.</h1>
+        <div style="width:56px;height:3px;background:var(--earth);margin:28px 0 24px;"></div>
+        <p class="body-text" style="max-width:520px;">We work with defense contractors, program offices, allied partners, and regulated industry operators. Use the form below or reach out directly.</p>
+      </div>
+    </section>
+
+    <!-- ── CONTACT BODY ──────────────────────────────────── -->
+    <section>
+      <div class="container">
+        <div class="grid-2" style="gap:80px;align-items:start;">
+
+          <!-- Form -->
+          <div>
+            <p class="eyebrow" style="margin-bottom:16px;">Send a Message</p>
+            <div class="rule"></div>
+            <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="fname" placeholder="First" required>
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lname" placeholder="Last" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="org">Organization</label>
+                <input type="text" id="org" name="org" placeholder="Company / Agency / Unit">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@organization.gov" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="trident-demo">TRIDENT — Request a Demo</option>
+                  <option value="trident-pilot">TRIDENT — Pilot Program Inquiry</option>
+                  <option value="sekon">SEKON — Critical Minerals / Provenance</option>
+                  <option value="stars">STARS — Compliance Infrastructure</option>
+                  <option value="partnership">Partnership / Teaming</option>
+                  <option value="investment">Investment Inquiry</option>
+                  <option value="press">Press / Media</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Describe your requirements or inquiry..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Submit Inquiry</button>
+            </form>
+            <div id="form-success" style="display:none;padding:24px;background:rgba(40,65,57,0.3);border:1px solid rgba(128,144,120,0.35);margin-top:24px;">
+              <p style="font-family:var(--font-display);font-weight:700;color:var(--warm-white);margin-bottom:8px;">Message received.</p>
+              <p class="body-text" style="font-size:0.9rem;">We'll be in touch within one to two business days. For time-sensitive matters, contact us directly at the address below.</p>
+            </div>
+          </div>
+
+          <!-- Contact info -->
+          <div style="display:flex;flex-direction:column;gap:24px;">
+            <div class="card card-earth">
+              <p class="eyebrow" style="margin-bottom:12px;">Direct Contact</p>
+              <p style="font-family:var(--font-display);font-weight:700;font-size:1rem;color:var(--warm-white);margin-bottom:4px;">Dana Mincey-Breaux</p>
+              <p style="font-family:var(--font-body);font-size:0.88rem;color:var(--wasabi);margin-bottom:16px;">Founder &amp; CEO</p>
+              <p class="mono" style="margin-bottom:6px;">dmbreaux@kaneatechsystems.com</p>
+              <p class="mono">kaneatechsystems.com</p>
+            </div>
+
+            <div class="card">
+              <p class="eyebrow" style="margin-bottom:12px;">Location</p>
+              <p class="body-text" style="font-size:0.9rem;">Washington, DC Metropolitan Area</p>
+              <p class="body-text" style="font-size:0.9rem;margin-top:4px;">Available for in-person briefings at cleared facilities in the NCR.</p>
+            </div>
+
+            <div class="panel-khaki">
+              <p class="eyebrow" style="margin-bottom:12px;">Entity Information</p>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;justify-content:space-between;">
+                  <span class="mono" style="font-size:0.68rem;color:rgba(250,250,247,0.5);">Legal Entity</span>
+                  <span style="font-family:var(--font-display);font-size:0.82rem;color:var(--warm-white);font-weight:700;">KANEA Technology Systems Inc.</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;">
+                  <span class="mono" style="font-size:0.68rem;color:rgba(250,250,247,0.5);">CAGE</span>
+                  <span class="mono">19Y32</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;">
+                  <span class="mono" style="font-size:0.68rem;color:rgba(250,250,247,0.5);">Certifications</span>
+                  <span style="font-family:var(--font-display);font-size:0.82rem;color:var(--warm-white);">SDVOSB · WOSB</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;">
+                  <span class="mono" style="font-size:0.68rem;color:rgba(250,250,247,0.5);">License</span>
+                  <span class="mono" style="font-size:0.7rem;">NPS-LIC-26-006</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <p class="eyebrow" style="margin-bottom:12px;">Cleared Engagements</p>
+              <p class="body-text" style="font-size:0.88rem;">KANEA personnel hold active TS/SCI clearances. Classified briefings and facility discussions can be accommodated. Contact us to coordinate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/components.js"></script>
+  <script>
+    renderNav('contact');
+    renderFooter();
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
